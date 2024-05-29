@@ -1,86 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>time table</title>
-      <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TAble</title>
+<link rel="stylesheet" href="styles.css">
 </head>
-
-
 <body>
-    <table>
-        <thead>
-            <tr>
-                <th>Header 1</th>
-                <th>Header 2</th>
-                <th>Header 3</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>Row 1, Col 1</td>
-                <td>Row 1, Col 2</td>
-                <td>Row 1, Col 3</td>
-            </tr>
-            <tr>
-                <td>Row 2, Col 1</td>
-                <td>Row 2, Col 2</td>
-                <td>Row 2, Col 3</td>
-            </tr>
-            <tr>
-                <td>Row 3, Col 1</td>
-                <td>Row 3, Col 2</td>
-                <td>Row 3, Col 3</td>
-            </tr>
-            <tr>
-                <td>Row 4, Col 1</td>
-                <td>Row 4, Col 2</td>
-                <td>Row 4, Col 3</td>
-            </tr>
-            <tr>
-                <td>Row 5, Col 1</td>
-                <td>Row 5, Col 2</td>
-                <td>Row 5, Col 3</td>
-            </tr>
-            <tr>
-                <td>Row 6, Col 1</td>
-                <td>Row 6, Col 2</td>
-                <td>Row 6, Col 3</td>
-            </tr>
-            <tr>
-                <td>Row 7, Col 1</td>
-                <td>Row 7, Col 2</td>
-                <td>Row 7, Col 3</td>
-            </tr>
-            <tr>
-                <td>Row 8, Col 1</td>
-                <td>Row 8, Col 2</td>
-                <td>Row 8, Col 3</td>
-            </tr>
-            <tr>
-                <td>Row 9, Col 1</td>
-                <td>Row 9, Col 2</td>
-                <td>Row 9, Col 3</td>
-            </tr>
-            <tr>
-                <td>Row 10, Col 1</td>
-                <td>Row 10, Col 2</td>
-                <td>Row 10, Col 3</td>
-            </tr>
-        </tbody>
-    </table>
 
-    <script>
-        // Select all table cells except header cells
-        const cells = document.querySelectorAll('tbody td');
+<table border="0">
+  <thead>
+    <tr>
+      <th>MON</th>
+      <th>TUE</th>
+      <th>WED</th>
+      <th>THUR</th>
+      <th>FRI</th>
+      <th>SAT</th>
+      <th>SUN</th>
+    </tr>
+  </thead>
+  <tbody id="table-body">
+    <!-- Table rows will be populated dynamically -->
+  </tbody>
+</table>
 
-        // Add event listeners to each cell
-        cells.forEach(cell => {
-            cell.addEventListener('click', () => {
-                alert(`You clicked on ${cell.textContent}`);
-            });
-        });
-    </script>
+<div id="user-input" style="margin-top: 10px;">
+  <!-- User input form -->
+  <label for="name">Name:</label>
+  <input type="text" id="name"><br><br>
+  
+  <label for="rank">Rank:</label>
+  <input type="text" id="rank"><br><br>
+  
+  <label for="discharge-date">Discharge Date:</label>
+  <input type="date" id="discharge-date"><br><br>
+  
+  <label for="other">Other:</label>
+  <input type="text" id="other"><br><br>
+  
+  <button onclick="addData()">Add Data</button>
+</div>
+
+<script src="script.js"></script>
 </body>
 </html>
