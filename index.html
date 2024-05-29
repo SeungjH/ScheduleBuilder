@@ -1,47 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>TAble</title>
-<link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TAble</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
 
-<table border="0">
-  <thead>
-    <tr>
-      <th>MON</th>
-      <th>TUE</th>
-      <th>WED</th>
-      <th>THUR</th>
-      <th>FRI</th>
-      <th>SAT</th>
-      <th>SUN</th>
-    </tr>
-  </thead>
-  <tbody id="table-body">
-    <!-- Table rows will be populated dynamically -->
-  </tbody>
-</table>
+    <table border="0">
+        <thead>
+            <tr>
+                <th>MON</th>
+                <th>TUE</th>
+                <th>WED</th>
+                <th>THUR</th>
+                <th>FRI</th>
+                <th>SAT</th>
+                <th>SUN</th>
+            </tr>
+        </thead>
+        <tbody id="table-body">
+            <!-- Table rows will be populated dynamically -->
+        </tbody>
+    </table>
 
-<div id="user-input" style="margin-top: 10px;">
-  <!-- User input form -->
-  <label for="name">Name:</label>
-  <input type="text" id="name"><br><br>
-  
-  <label for="rank">Rank:</label>
-  <input type="text" id="rank"><br><br>
-  
-  <label for="discharge-date">Discharge Date:</label>
-  <input type="date" id="discharge-date"><br><br>
-  
-  <label for="other">Other:</label>
-  <input type="text" id="other"><br><br>
-  
-  <button onclick="addData()">Add Data</button>
-</div>
+    <div id="user-input" style="margin-top: 10px;">
+        <!-- User input form -->
+        <label for="name">Name:</label>
+        <input type="text" id="name"><br>
 
-<script src="script.js"></script>
+        <label for="rank">Rank:</label>
+        <input type="text" id="rank"><br>
+
+        <label for="other">Other:</label>
+        <input type="text" id="other"><br>
+        
+        <label for="groupA">Group A?</label>
+        <input type="checkbox" id="checkboxA">
+        
+        <label for="groupB">Group B?</label>
+        <input type="checkbox" id="checkboxB">
+        
+        <label for="groupA">Group C?</label>
+        <input type="checkbox" id="checkboxC">
+
+
+        <button onclick="checkInput(); addData(); ">Add Data</button>
+    </div>
+
+    <script src="script.js"></script>
 </body>
+
 </html>
